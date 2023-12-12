@@ -9,7 +9,7 @@ function TaskList({taskList}) {
         {tasks.map((task) => {
             return (
                 <div id='{task.id}' className='task'>
-                    <p>{task.task}</p>
+                    <p>{task.task}: {task.completed ? "COMPLETED" : "NOT COMPLETED"}</p>
                 </div>
             )
         }) 
