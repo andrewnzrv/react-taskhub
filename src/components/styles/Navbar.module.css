@@ -1,0 +1,8 @@
+nav {
+    width: 100vh;
+    height: 50px;
+    background: blue;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}

@@ -1,14 +1,10 @@
-import Navbar from "./Navbar"
-import Footer from "./Footer"
-import Sidebar from "./Sidebar"
-
+import taskList from '../assets/tasks.json'
+import TaskList from '../components/TaskList';
 
 function Home() {
     return (
         <div> 
-            <Navbar/>
-            <Footer/>
-            <Sidebar/>
+            <TaskList taskList={taskList}/>
        </div>
 
     );
