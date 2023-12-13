@@ -7,8 +7,8 @@ import Footer from './components/Footer';
 function App() {
   return(
     <div> 
-      <Navbar/>
-      <div className='main'>
+        <Navbar/>
+        <div className='main'>
         <Sidebar/>
         <Home/>
       </div>
@@ -19,3 +19,7 @@ function App() {
 }
 
 export default App
+
+
+
+

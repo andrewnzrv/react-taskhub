@@ -20,3 +20,24 @@
 body {
   height: 100vh;
 }
+
+.task{
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 15px;
+ 
+}
+
+button{
+  background-color: #d8d8d8;
+  border-color: #d8d8d8;
+  color: black;
+  width: 100px;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: #fffdfd;
+}
+
