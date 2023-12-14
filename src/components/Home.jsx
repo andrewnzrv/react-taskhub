@@ -6,7 +6,6 @@ function Home() {
         <div> 
             <TaskList taskList={taskList}/>
        </div>
-
     );
 }
 

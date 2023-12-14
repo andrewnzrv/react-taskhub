@@ -1,6 +1,7 @@
 import { useState } from "react";
 import taskListStyles from './styles/TaskList.module.css'
 import Task from '../components/Task'
+import AddNewTask from "./AddNewTask";
 
 function TaskList({taskList}) {
     const [tasks, setTasks] = useState(taskList);
@@ -11,14 +12,19 @@ function TaskList({taskList}) {
         setTasks(updatedTasks);
     };
 
+    // Add a new task
+    const addNewTask = (newTask) => {
+    };
+
     return (
         <div className={taskListStyles.taskList}>
         {tasks.map((task) => {
             return (
-                <Task task={task}/> 
+                <Task key={task.id} task={task}/> 
             )
         }) 
         }
+        <AddNewTask tasks={tasks} setTasks={setTasks} addNewTask={addNewTask}/>
         </div>
     )
 }
