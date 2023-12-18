@@ -1,7 +1,14 @@
-footer {
-    background: #0000ff;
-    height: 50px;
+footer a {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    text-align: none;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 300;
+    width: 100%;
+    height: fit-content;
+   
 }

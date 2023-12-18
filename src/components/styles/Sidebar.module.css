@@ -1,12 +1,14 @@
 .sideBar {
-    background-color: grey;
-    height: 100vh;
+    background-color: #001A29;
     width: 80px;
+    height: 130px;
     display: flex;
     align-items: center;
     flex-direction: column;
     padding-top: 50px;
     gap: 40px;
-    
+    border-radius: 8px;
+    font-size: 1rem;     
 }
+
 

@@ -13,18 +13,18 @@ function TaskList({taskList}) {
     };
 
     // Add a new task
-    const addNewTask = (newTask) => {
-    };
+    const addNewTask = (newTask) => {};
 
     return (
         <div className={taskListStyles.taskList}>
+        <AddNewTask tasks={tasks} setTasks={setTasks} addNewTask={addNewTask}/>
         {tasks.map((task) => {
             return (
                 <Task key={task.id} task={task}/> 
             )
         }) 
         }
-        <AddNewTask tasks={tasks} setTasks={setTasks} addNewTask={addNewTask}/>
+        
         </div>
     )
 }

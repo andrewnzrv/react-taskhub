@@ -1,43 +1,87 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.google.com/specimen/Work+Sans');
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+body {
+  font-family: 'Work Sans', sans-serif;;
+  margin: 0;
+  padding: 0;
+  background-color: #012638;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
 }
 
 body {
   height: 100vh;
 }
 
-.task{
+.task {
   display: flex;
   justify-content: space-between;
   gap: 50px;
-  padding: 15px;
- 
+  padding: 20px;
+
 }
 
 button{
-  background-color: #d8d8d8;
-  border-color: #d8d8d8;
-  color: black;
+  border: none;
+  background-color: #174763;
   width: 100px;
   border-radius: 10px;
+  cursor: pointer;
+  color: white;
 }
 
-button:hover {
-  background-color: #fffdfd;
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  background-color: #174763;
+  margin: 8px;
+  border-radius: 8px;
 }
 
+.todo-input {
+  outline: none;
+  margin: 8px;
+  background: none;
+  border: 1px solid #174763;
+  padding: 30px;
+  font-size: 1rem;
+  width: 500px;
+  border-radius: 8px;
+  color: #fff;
+}
+
+.todo-input::placeholder {
+  color: #ffffff4d;
+}
+
+.Icon-Wrapprer{
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.input-btn {
+  border: none;
+  background: none;
+  color: #fff;
+  margin: 21px;
+}
+
+
+.delete-icon {
+  cursor: pointer;
+  
+}
+
+.about {
+  width: 750px;
+  padding: 40px;
+  color: white;
+  line-height: 1.5;
+}

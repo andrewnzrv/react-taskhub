@@ -5,7 +5,7 @@ function Navbar () {
     return(
         <nav>
             <img src="" alt="" />
-            <Link to="/"> Logo </Link>
+            <Link to="/">React To Do List</Link>
         </nav>
     );
 }
