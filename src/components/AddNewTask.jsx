@@ -23,7 +23,7 @@ function AddNewTask(props) {
         <div>
             <form className="form" onSubmit={handleSubmit}>
                 <input className="todo-input" name='newTask' type='text' placeholder='Write your new task here' value={task} onChange={handleTaskInput}></input>
-                <FontAwesomeIcon icon="fa-solid fa-plus" />
+                
                 <button className="input-btn" type='submit'>Add task</button>
             </form>
         </div>
