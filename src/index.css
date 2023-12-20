@@ -1,7 +1,7 @@
-
+@import url('https://fonts.google.com/specimen/Work+Sans');
 
 body {
-  font-family: Avenir;
+  font-family: 'Work Sans', sans-serif;;
   margin: 0;
   padding: 0;
   background-color: #012638;
@@ -71,6 +71,7 @@ button{
   background: none;
   color: #fff;
   margin: 21px;
+  
 }
 
 
@@ -81,7 +82,21 @@ button{
 
 .about {
   width: 750px;
-  padding: 40px;
+  padding: 36px;
   color: white;
   line-height: 1.5;
 }
+
+.completed  {
+  /* styles for completed tasks */
+  text-decoration: line-through; /* example: strikethrough text */
+  color: black;
+  transition: ease-in 0.2s;
+
+}
+
+.checkbox{
+  border: none;
+  text-decoration: none;
+}
+
