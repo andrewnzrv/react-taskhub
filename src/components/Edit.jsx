@@ -1,33 +1,33 @@
 import { useState } from "react";
-import './styles/AddNewTask.module.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import "./styles/AddNewTask.module.css";
 
 function Edit(props) {
-    const [task, setTask] = useState();
-   
+  const [task, setTask] = useState(props.task);
 
-    const handleTaskInput = (e) => setTask(e.target.value);
-    const id = props.tasks.length + 1;
+  const handleTaskInput = (e) => setTask(e.target.value);
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const newTask = {task, completed:false, id}
-        props.addNewTask(newTask);
-        const updatedTaskList = [newTask,...props.tasks];
-        props.setTasks(updatedTaskList);
-        setTask('');
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    props.setTask(task);
+    props.setEdited(false);
+  };
 
-    return (
-        <div>
-            <form className="form" onSubmit={handleSubmit}>
-                <input className="todo-input" name='newTask' type='text' placeholder='Write your new task here' value={task} onChange={handleTaskInput}></input>
-                
-                <button className="input-btn" type='submit'>Save</button>
-            </form>
-        </div>
-    )
+  return (
+    <div>
+      <form className="form" onSubmit={handleSubmit}>
+        <input
+          className="todo-input"
+          name="editTask"
+          type="text"
+          value={task}
+          onChange={handleTaskInput}
+        ></input>
+        <button className="input-btn" type="submit">
+          Save
+        </button>
+      </form>
+    </div>
+  );
 }
 
 export default Edit;

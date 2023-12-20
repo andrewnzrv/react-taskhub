@@ -2,12 +2,13 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
-import AddNewTask from "./AddNewTask";
+import Edit from "./Edit";
 
 function Task(props) {
   const [isDeleted, setIsDeleted] = useState(false);
   const [isEdited, setEdited] = useState(false);
   const [isChecked, setIsChecked] = useState(props.task.completed);
+  const [task, setTask] = useState(props.task.task);
 
   if (isDeleted) {
     return null;
@@ -19,7 +20,6 @@ function Task(props) {
 
   const handleEdit = () => {
     setEdited(true);
-    console.log(handleEdit);
   };
 
   const handleCheckbox = () => {
@@ -28,29 +28,33 @@ function Task(props) {
   };
 
   return (
-    <div className="task">
-      <p className={isChecked ? "completed" : "not-completed"}>
-        {props.task.task}
-      </p>
-      <div className="Icon-Wrapprer">
-        <input
-          className="checkbox"
-          type="checkbox"
-          checked={isChecked}
-          onChange={handleCheckbox}
-        />
-        <FontAwesomeIcon
-          className="edit-icon"
-          icon={faPenToSquare}
-          onClick={handleEdit}
-        />
-        <FontAwesomeIcon
-          className="delete-icon"
-          icon={faTrash}
-          onClick={handleDelete}
-        />
-      </div>
-    </div>
+    <>
+      {!isEdited ? (
+        <div className="task">
+          <p className={isChecked ? "completed" : "not-completed"}>{task}</p>
+          <div className="Icon-Wrapprer">
+            <input
+              className="checkbox"
+              type="checkbox"
+              checked={isChecked}
+              onChange={handleCheckbox}
+            />
+            <FontAwesomeIcon
+              className="edit-icon"
+              icon={faPenToSquare}
+              onClick={handleEdit}
+            />
+            <FontAwesomeIcon
+              className="delete-icon"
+              icon={faTrash}
+              onClick={handleDelete}
+            />
+          </div>
+        </div>
+      ) : (
+        <Edit task={props.task.task} setEdited={setEdited} setTask={setTask} />
+      )}
+    </>
   );
 }
 
