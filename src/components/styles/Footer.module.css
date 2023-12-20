@@ -1,4 +1,4 @@
-footer a {
+footer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,5 +10,5 @@ footer a {
     font-weight: 300;
     width: 100%;
     height: fit-content;
-   
+    margin-top: auto;
 }

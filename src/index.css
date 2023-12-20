@@ -5,6 +5,15 @@ body {
   margin: 0;
   padding: 0;
   background-color: #012638;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -100,3 +109,7 @@ button{
   text-decoration: none;
 }
 
+.link {
+  color:#0077B5;
+  font-weight: 700;
+}
