@@ -1,6 +1,6 @@
 # React TaskHub
 
-This is a frontend of a to-do list app built with React + Vite by Andrei Nazarov and Daniele Maselli.
+This is a frontend of a to-do list app built with React + Vite by [Andrei Nazarov](https://www.linkedin.com/in/andrew-nazarov/) and [Daniele Maselli](https://www.linkedin.com/in/daniele-maselli-878a88101/).
 
 ## Features
 - Add a new task
