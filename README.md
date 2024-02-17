@@ -1,4 +1,4 @@
-# React TuskHub
+# React TaskHub
 
 This is a frontend of a to-do list built with React + Vite.
 
